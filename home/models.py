@@ -8,7 +8,7 @@ class BlogModel(models.Model):
     title = models.CharField(max_length=1000)
     content = FroalaField()
     slug = models.SlugField(max_length=1000, null=True, blank=True)
-    image = models.ImageField(upload_to='blog')
+    image = models.ImageField(upload_to='uploads')
     created_at = models.DateTimeField(auto_now_add=True)
     upload_to = models.DateTimeField(auto_now=True)
     
