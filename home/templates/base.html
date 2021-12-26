@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from demo.bootstrapious.com/directory/1-6-1/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Apr 2021 09:21:30 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Directory Theme by Bootstrapious</title>
+    <title>My Distro Hope</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -21,8 +20,6 @@
     <link rel="stylesheet" href="/media/css/magnific-popup.css">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="/media/css/default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="/media/css/custom.css">
     <!-- JS -->
     <script src="/media/js/main.js"></script>
 
@@ -30,39 +27,57 @@
   <body style="padding-top: 72px;">
     <input type="hidden" id="csrf" value="{{csrf_token}}">
     <header class="header">
+      <!-- <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white"> -->
+      <!--   <div class="container-fluid"> -->
+      <!--     <div class="d-flex align-items-center"> -->
+      <!--       <a class="d-flex text-center align-items-center navbar-brand py-1" href="/"> -->
+      <!--         <h8>My</h8><h3>Distro Hope</h3> -->
+      <!--       </a> -->
+      <!--     </div> -->
+      <!--     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> -->
+      <!--       <span class="navbar-toggler-icon"></span> -->
+      <!--     </button> -->
+          <!-- Navbar Collapse -->
+      <!--     {% if request.user.is_authenticated %} -->
+      <!--     <div class="collapse navbar-collapse" id="navbarCollapse"> -->
+      <!--       <ul class="navbar-nav ml-auto"> -->
+      <!--         <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"> -->
+      <!--           <a class="btn btn-info" href="{% url 'add_blog' %}">Support</a> -->
+      <!--         </li> -->
+      <!--         <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"> -->
+      <!--           <a class="btn btn-danger" href="{% url 'login_view' %}">About</a> -->
+      <!--         </li> -->
+      <!--         {% else %} -->
+      <!--         <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"> -->
+      <!--           <a class="btn btn-primary" href="{% url 'add_blog' %}">Support</a> -->
+      <!--         </li> -->
+      <!--         {% endif %} -->
+      <!--       </ul> -->
+      <!--     </div> -->
+      <!--   </div> -->
+      <!-- </nav> -->
+      <!-- /Navbar -->
 
       <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
         <div class="container-fluid">
-          <div class="d-flex align-items-center"><a class="navbar-brand py-1" href="/">
-          <h3>my Distro Hope</h3>
-          </div>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-          <!-- Navbar Collapse -->
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-
-            <ul class="navbar-nav ml-auto">
-
-              {% if request.user.is_authenticated %}
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-info" href="{% url 'login_view' %}">Add Blog</a>
+          <a class="navbar-brand py-1" href="/">myDistroHope</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="btn btn-info active" aria-current="page" href="#">Support</a>
               </li>
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-danger" href="{% url 'login_view' %}">Logout</a>
-              </li>
-              {% else %}
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-primary" href="{% url 'login_view' %}">Add Blog</a>
-              </li>
-              {% endif %}
             </ul>
           </div>
         </div>
       </nav>
-      <!-- /Navbar -->
     </header>
-    {% block start %}
+{% block start %}
 
-    {% endblock %}
+               
+{% endblock %}
     <!-- Footer-->
     <footer class="position-relative z-index-10 d-print-none">
 
@@ -72,12 +87,13 @@
             <div class="col-md-6 text-center text-md-left">
               <p class="text-sm mb-md-0">&copy; 2021, Cleo Menezes Jr.  All rights reserved.</p>
             </div>
-
           </div>
         </div>
       </div>
     </footer>
 
+  <!-- Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
   </body>
 
