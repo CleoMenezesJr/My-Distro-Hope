@@ -120,3 +120,6 @@ def verify(request, token):
         return redirect('/login/')
     except Exception as e:
         print(e)
+
+def theme(request, id):
+    pass
